@@ -6,8 +6,7 @@ async_generator = __import__('5-basic_async_generator').async_generator
 
 
 async def main():
-    async for number in async_generator():
-        print(number)
+    print([i async for i in async_generator()])
 
 
 asyncio.run(main())
