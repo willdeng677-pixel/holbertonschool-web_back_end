@@ -2,12 +2,12 @@
 
 import asyncio
 
-async_generator = __import__('5-basic_async_generator').async_generator
+async_generator = __import__('0-async_generator').async_generator
 
+async def print_yielded_values():
+    result = []
+    async for i in async_generator():
+        result.append(i)
+    print(result)
 
-async def main():
-    print([i async for i in async_generator()])
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
+asyncio.run(print_yielded_values())
