@@ -9,4 +9,5 @@ async def main():
     print([i async for i in async_generator()])
 
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
